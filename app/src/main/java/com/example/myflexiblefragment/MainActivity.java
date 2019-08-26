@@ -12,8 +12,8 @@ import android.util.Log;
                            fragment_home.xml => HomeFragment.java
 Structure MainActivity =>  activity_main.xml
                            fragment_category.xml => CategoryFragment.jave
-                           fragment_detail_category => DetailCategoryFragment.jave
-
+                           fragment_detail_category.xml => DetailCategoryFragment.jave
+                           fragment_option_dialog.xml => OptionDialogFragment.java
 */
 
 public class MainActivity extends AppCompatActivity {
