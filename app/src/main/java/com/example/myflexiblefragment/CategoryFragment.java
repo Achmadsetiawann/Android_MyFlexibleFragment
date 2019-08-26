@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +33,9 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
         return inflater.inflate(R.layout.fragment_category, container, false);
     }
 
+
+    /* Structure awal dengan fungsi panggil fragment onViewCreated */
+
     @Override
     public void onViewCreated (@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -39,9 +44,26 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
         btnDetailCategory.setOnClickListener(this);
     }
 
+
+    /* Function onClick menerapkan fungsi replace fragment dari CategoryFragment berpindah ke DetailCategory Fragment */
+
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_detail_category){
+            DetailCategoryFragment mDetailCategoryFragment = new DetailCategoryFragment();
+
+            Bundle mBundle = new Bundle();
+            mBundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle");
+            String description = "Kategori ini akan berisi produk-produk lifestyle";
+            mDetailCategoryFragment.setArguments(mBundle);
+            mDetailCategoryFragment.setDescription(description);
+            FragmentManager mFragmentManager = getFragmentManager();
+            if (mFragmentManager!= null) {
+                FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
+                mFragmentTransaction.replace(R.id.frame_container, mDetailCategoryFragment, DetailCategoryFragment.class.getSimpleName());
+                mFragmentTransaction.addToBackStack(null);
+                mFragmentTransaction.commit();
+            }
         }
     }
 

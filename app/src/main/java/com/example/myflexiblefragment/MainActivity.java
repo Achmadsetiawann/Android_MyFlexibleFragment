@@ -11,7 +11,8 @@ import android.util.Log;
 /*
                            fragment_home.xml => HomeFragment.java
 Structure MainActivity =>  activity_main.xml
-                           fragment_category.xml => CategorFragment.jave
+                           fragment_category.xml => CategoryFragment.jave
+                           fragment_detail_category => DetailCategoryFragment.jave
 
 */
 

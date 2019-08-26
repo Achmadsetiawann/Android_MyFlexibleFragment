@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     }
 
     /* Structure awal dengan fungsi panggil fragment onViewCreated */
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
@@ -44,6 +45,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
 
     /* Function onClick move to CategoryFragment */
+
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_category){
