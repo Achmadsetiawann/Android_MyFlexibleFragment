@@ -11,6 +11,7 @@ import android.util.Log;
 /*
                            fragment_home.xml => HomeFragment.java
 Structure MainActivity =>  activity_main.xml
+                           fragment_category.xml => CategorFragment.jave
 
 */
 
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             mFragmentTransaction.commit();
         }
 
-
     }
+
+
+
+
 }
