@@ -1,12 +1,14 @@
 package com.example.myflexiblefragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +38,7 @@ public class DetailCategoryFragment extends Fragment implements View.OnClickList
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
@@ -106,6 +109,8 @@ public class DetailCategoryFragment extends Fragment implements View.OnClickList
         switch (v.getId()) {
 
             case R.id.btn_profile:
+                Intent mIntent = new Intent(getActivity(), ProfileActivity.class);
+                startActivity(mIntent);
                 break;
 
             case R.id.btn_show_dialog:
